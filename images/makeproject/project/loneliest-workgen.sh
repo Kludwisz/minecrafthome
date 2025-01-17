@@ -9,6 +9,6 @@ wu_name="loneseed_1.00_$i"
     --command_line "--start $((i * 1024)) --end $(((i + 1) * 1024))" \
     --wu_name "${wu_name}" \
     --min_quorum 2 \
-    --credit 2500
+    --credit 50000
 
 done
