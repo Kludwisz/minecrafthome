@@ -148,7 +148,7 @@
             <output>loneseed_assimilator</output>
         </daemon>
         <daemon>
-            <cmd>xoroshigo_assimilator.py -app xorishigo -d 3</cmd>
+            <cmd>xoroshigo_assimilator.py -app xoroshigo -d 3</cmd>
             <pid_file>xoroshigo_assimilator</pid_file>
             <output>xoroshigo_assimilator</output>
         </daemon>
