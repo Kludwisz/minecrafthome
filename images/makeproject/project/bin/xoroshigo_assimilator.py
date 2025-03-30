@@ -23,15 +23,12 @@ class MCAtHAssimilator(Assimilator):
                     except OSError:
                         pass
 
-                    lines = list()
                     input_lines = input_str.splitlines()
                     config_filename = input_lines[2].split(' ')[0]
                     config_name = config_filename[0:len(config_filename)-4]
                     results_filename = config_name + "-results.txt"
                     with open(os.path.join(path, results_filename), "a") as f:
                         for line in input_str.splitlines():
-                            lines.add(line)
-                        for line in lines:
                             f.write("{}\n".format(line))
                 except Exception as e: print(e)
 
