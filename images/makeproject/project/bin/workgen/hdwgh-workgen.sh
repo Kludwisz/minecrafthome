@@ -9,7 +9,7 @@ do
   echo "$file"
   # Check if it is a file (not a directory)
   if [ -f "$file" ]; then
-    ./bin/stage_file $file
+    ./bin/stage_file "$file"
     filename=$(basename "$file")
     echo "Staged file $filename"
     # Extract the filename without the path
@@ -21,7 +21,7 @@ do
         --credit 5000 \
         --delay_bound 1209600 \
         --command_line "-jar HDWGHSeedFinding-all.jar" \
-        $filename
+        "$filename"
     
     echo "Created work for $filename"
   fi

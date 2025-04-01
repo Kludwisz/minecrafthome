@@ -41,9 +41,9 @@ def find_bin_files_and_check_executable(directory):
     logging.debug(f"Starting search in directory: {directory}")
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith(".bin"):
+            if file.endswith(".bin") or file.endswith(".py") or file.endswith(".sh"):
                 filepath = os.path.join(root, file)
-                logging.debug(f"Found .bin file: {filepath}")
+                logging.debug(f"Found executable file: {filepath}")
                 if not check_executable_permission(filepath):
                     logging.info(f"File {filepath} does not have executable permission.")
                     failed_files.append(filepath)
@@ -63,4 +63,4 @@ if __name__ == "__main__":
         for file in result:
             print(f" - {file}")
     else:
-        print("Success: All .bin files have executable permission.")
+        print("Success: All executable files have executable permission.")

@@ -8,8 +8,8 @@ from Boinc import database
 # argv[1] and argv[2] contain the file we want to check
 result_1 = sys.argv[1]
 result_2 = sys.argv[2]
-print result_1
-print result_2
+print(result_1)
+print(result_2)
 database.connect_default_config()
 file_1 = database.Results.find(id=result_1)[0]
 file_2 = database.Results.find(id=result_2)[0]

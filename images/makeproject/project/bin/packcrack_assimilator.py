@@ -24,7 +24,7 @@ class PackCrackAssimilator(Assimilator):
                 except OSError:
                         pass
                 with open(os.path.join(path, "results.txt"), "a") as f:
-		        for match in re_result.finditer(input_str):
+                        for match in re_result.finditer(input_str):
                                 f.write("{}\n".format(match.group(1)))
 
 if __name__ == "__main__":
