@@ -23,13 +23,13 @@ jobs:
       id: run_script_apps
       run: |
         python3 ci_tools/executable-check.py > output_apps.txt
-        echo "::set-output name=failed_apps::$(grep -c " - " output_apps.txt)"
+        echo "failed_apps=$(grep -c " - " output_apps.txt)" >> $GITHUB_ENV
       env:
         # Replace with the directory you want to check
         DIRECTORY_TO_CHECK: images/makeproject/project/apps
 
     - name: Check for failed files
-      if: steps.run_script.outputs.failed_apps != '0'
+      if: $failed_files != '0'
       run: |
         echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
         cat output.txt
@@ -37,5 +37,5 @@ jobs:
  
 
     - name: Success (if no failed files)
-      if: steps.run_script.outputs.failed_apps == '0'
+      if: $failed_files == '0'
       run: echo "All .bin files have executable permissions (or no .bin files found)."
