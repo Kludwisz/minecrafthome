@@ -24,4 +24,14 @@
         <min_opencl_version>102</min_opencl_version>
         <min_driver_version>38500</min_driver_version>
     </plan_class>
+    <plan_class>
+        <name>win-modern</name>
+        <min_os_version>603960000</min_os_version>
+        <!-- Enforce windows 8.1+ requirement-->
+    </plan_class>
+    <plan_class>
+        <name>lin-modern</name>
+        <min_libc_version>227</min_libc_version>
+        <!-- Enforce GLIBC 2.27 or above-->
+    </plan_class>
 </plan_classes>
