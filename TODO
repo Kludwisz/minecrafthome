@@ -1,2 +1,2 @@
-- add prng checksum as extra output from work gen file
-- split work units into smaller ones (?)
+- verify setup
+- update workgen script
