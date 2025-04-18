@@ -26,7 +26,10 @@ class panoPaleAssimilator(Assimilator):
                     lines = set()
                     with open(os.path.join(path, "results.txt"), "a") as f:
                         for line in input_str.splitlines():
-                            lines.add(line)
+                            # only assimilate actual results, lines that begin with ##
+                            # contain the prng checksum used in the validation step
+                            if "##" not in line:
+                                lines.add(line) 
                         for line in lines:
                             f.write("{}\n".format(line))
                 except Exception as e: print(e)
