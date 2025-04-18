@@ -68,12 +68,11 @@
         <name>xoroshigo</name>
         <user_friendly_name>Xoroshiro128++ Guessing Order Optimization</user_friendly_name>
     </app>
-        <app>
+    <app>
         <name>xoroshigo2</name>
         <user_friendly_name>Xoroshiro128++ Guessing Order Optimization v1.1</user_friendly_name>
     </app>
-    </app>
-        <app>
+    <app>
         <name>panopale</name>
         <user_friendly_name>1.21.4 Pale Garden Panorama Cracker</user_friendly_name>
     </app>
