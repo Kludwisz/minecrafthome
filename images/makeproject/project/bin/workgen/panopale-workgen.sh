@@ -7,7 +7,6 @@ do
     bin/stage_file --verbose --copy "$file"
 done
 
-#command_line has the --device flag to trick the wrapper into passing args to the child app
 for i in {0..262144}; do
 wu_name="panopale_1.00_$i"
   echo "create_work: ${wu_name}"
@@ -18,5 +17,4 @@ wu_name="panopale_1.00_$i"
     --wu_name "${wu_name}" \
     --min_quorum 2 \
     --credit 2500
-
 done
