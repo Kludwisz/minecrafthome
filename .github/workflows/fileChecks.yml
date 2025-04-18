@@ -64,7 +64,7 @@ jobs:
       - name: Check for failed files
         if: ${{ env.failed_bin != '0' }} 
         run: |
-          echo "::error title=Version mismatch::Found xml files with mismatched version number from parent directory.  See output for details."
+          echo "::error title=Permission error::Files found without executable permissions:"
           cat output_bin.txt
           exit 1
  
