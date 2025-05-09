@@ -8,7 +8,7 @@ do
 done
 
 for i in {0..4096}; do
-wu_name="panopale_1.01_$i"
+wu_name="panopale_1.02_$i"
   echo "create_work: ${wu_name}"
   bin/create_work --appname panopale \
     --wu_template templates/panopale_in \
