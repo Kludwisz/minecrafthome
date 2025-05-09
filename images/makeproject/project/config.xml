@@ -51,6 +51,7 @@
         <recaptcha_public_key>${RECAPTCHA_PUBLIC_KEY}</recaptcha_public_key>
         <recaptcha_private_key>${RECAPTCHA_PRIVATE_KEY}</recaptcha_private_key>
         <reliable_priority_on_over>15000</reliable_priority_on_over>
+        <credit_by_app/>
     </config>
     <tasks>
         <task>
@@ -79,7 +80,7 @@
         </task>
         <task>
             <cmd>update_stats</cmd>
-            <period>1 hour</period>
+            <period>15 minute</period>
             <disabled>0</disabled>
             <output>update_stats.out</output>
         </task>
@@ -130,6 +131,13 @@
         </daemon>
         <daemon>
             <cmd>file_deleter -d 3</cmd>
+        </daemon>
+        
+        <daemon>
+            <cmd>db_purge --app kaktoos -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+            <disabled>1</disabled>
         </daemon>
         <!-- Assimilators -->
         <daemon>
