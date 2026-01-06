@@ -1,7 +1,1 @@
-- update diaveins_in with better fpops estimates and a better max task length
-
-- add executables for windows & linux, update version.xml if necessary
-
-
-- uncomment project.xml user-friendly name
-- uncomment assimilator & validator daemons in config.xml
+- uncomment new app in project.xml 
