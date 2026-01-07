@@ -84,10 +84,8 @@
         <name>repeatdecor</name>
         <user_friendly_name>Repeating decoration seeds v1</user_friendly_name>
     </app>
-    <!--
     <app>
         <name>diaveins</name>
         <user_friendly_name>1.21 Find large veins of diamond ore</user_friendly_name>
     </app>
-    -->
 </boinc>
